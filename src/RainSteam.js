@@ -9,9 +9,9 @@ const MIN_PADDING = -30;
 const MAX_PADDING = 30;
 
 const MIN_STREAM_LENGHT = 4;
-const MAX_STREAM_LENGTH = 30;
+const MAX_STREAM_LENGTH = 10;
 
-const MIN_INTERVAL_DEALY = 30;
+const MIN_INTERVAL_DEALY = 0;
 const MAX_INTERVAL_DELAY = 80;
 
 const MIN_DEALY_BETWEEN_STREAMS = 0;
@@ -38,6 +38,7 @@ const RainStream = props => {
     const radomPadding = getRandomRange(MIN_PADDING, MAX_PADDING)
     const [stream, setStream] = useState(getRandomSteam())
     const [topPadding, setTopPadding] = useState(stream.length * -30);
+    const [style, setStyle] = useState('matrix-rain');
     const [intervalDelay, setIntervalDelay] = useState(null);
 
     useEffect(() => {
@@ -66,16 +67,15 @@ const RainStream = props => {
             setStream(getMutatedStream)
         }
     }, intervalDelay);
-    return <div style={{
+
+    setTimeout(() => {
+        setStyle('matrix-rain-end');
+    }, 8000)
+
+    return <div className={style} style={{
         marginTop: topPadding,
-        fontFamily: 'MatrixCode',
         color: '#8F00FF',
-        writingMode: 'vertical-rl',
-        textOrientation: 'upright',
-        whiteSpace: 'nowrap',
-        userSelect: 'none',
-        textShadow: '0px 0px 8px rgba(176, 38, 255, 0.8)',
-        fontSize: 30
+        textShadow: '0px 0px 8px rgba(176, 38, 255, 0.8)'
     }}>{stream.map((char, idx) => <span key={idx} style={{
         color: idx === stream.length - 1 ? '#fff' : undefined,
         textShadow: idx === stream.length - 1 ? '0px 0px 8px rgba(255, 255, 255, 1)' : undefined,
