@@ -5,7 +5,7 @@ import Name from './Name'
 
 const Matrix = () => {
 
-    const containerRef = useRef(null);
+    const containerRef = useRef();
     const [containerSize, setContainerSize] = useState(null);
     const [style, setStyle] = useState('matrix');
 

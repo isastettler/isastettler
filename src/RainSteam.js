@@ -42,10 +42,18 @@ const RainStream = props => {
     const [intervalDelay, setIntervalDelay] = useState(null);
 
     useEffect(() => {
-        setTimeout(() => {
-            setIntervalDelay(getRandomRange(MIN_INTERVAL_DEALY, MAX_INTERVAL_DELAY));
-        }, getRandomRange(MIN_DEALY_BETWEEN_STREAMS, MAX_DELAY_BETWEEN_STREAMS))
-    }, []);
+        if(style === 'matrix-rain'){
+            setTimeout(() => {
+                setIntervalDelay(getRandomRange(MIN_INTERVAL_DEALY, MAX_INTERVAL_DELAY));
+            }, getRandomRange(MIN_DEALY_BETWEEN_STREAMS, MAX_DELAY_BETWEEN_STREAMS))
+        } else {
+            const parent = document.getElementsByClassName('matrix-half');
+            const child = document.getElementsByClassName('matrix-rain-end');
+            setTimeout(() => {
+                parent[0].removeChild(child[0]);
+            },2000)
+        }
+    }, [style]);
 
     useInterval(() => {
         if(!props.height) return;
