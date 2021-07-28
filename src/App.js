@@ -1,12 +1,14 @@
-import './App.css';
-import Matrix from './Matrix';
+import "./App.css";
+import Matrix from "./Matrix";
+import Main from "./Main";
 
 function App() {
-  return (
-    <div>
-    <Matrix />
-    </div>
-  );
+	return (
+		<div className="container">
+			<Matrix />
+			<Main />
+		</div>
+	);
 }
 
 export default App;

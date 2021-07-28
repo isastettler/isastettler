@@ -1,113 +1,157 @@
 .matrix {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  height: 100%;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	height: 100%;
 }
 
 .matrix-half {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  height: 50%;
-  transition: height 3s;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 40%;
+	transition: height 3s;
 }
 .container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 }
 .header {
-  display: flex;
+	display: flex;
 }
 .header-info-enter {
-  font-family: 'MatrixCode';
-  font-size: 20px;
-  padding-top: 10px;
-  padding-right: 10px;
-  color: #8F00FF;
-  text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
-  opacity: 0;
+	font-family: "MatrixCode";
+	font-size: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	color: #8f00ff;
+	text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
+	opacity: 0;
 }
 .header-info {
-  font-family: 'MatrixCode';
-  font-size: 20px;
-  padding-top: 10px;
-  padding-right: 10px;
-  color: white;
-  text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
-  opacity: 1;
-  transition: opacity 3s ease-in;
+	font-family: "MatrixCode";
+	font-size: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	color: white;
+	text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+	opacity: 1;
+	transition: opacity 3s ease-in;
 }
 .char-enter {
-  font-family: 'MatrixCode';
-  font-size: 30px;
-  color: #8F00FF;
-  text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
-  opacity: 0;
-  z-index: 10;
+	font-family: "MatrixCode";
+	font-size: 30px;
+	color: #8f00ff;
+	text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
+	opacity: 0;
+	/* z-index: 10; */
 }
 .char {
-  font-family: 'MatrixCode';
-  font-size: 30px;
-  padding-right: 10px;
-  color: #8F00FF;
-  text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
-  opacity: 1;
-  transition: opacity 2s ease-in;
+	font-family: "MatrixCode";
+	font-size: 30px;
+	padding-right: 10px;
+	color: #8f00ff;
+	text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
+	opacity: 1;
+	transition: opacity 2s ease-in;
 }
 
 .matrix-rain {
-  font-family: 'MatrixCode';
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  white-space: nowrap;
-  user-select: none;
-  font-size: 30px;
-  z-index: -1;
+	font-family: "MatrixCode";
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	white-space: nowrap;
+	user-select: none;
+	font-size: 30px;
+	/* z-index: -1; */
 }
 
 .matrix-rain-end {
-  font-family: 'MatrixCode';
-  color: #8F00FF;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  white-space: nowrap;
-  user-select: none;
-  text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
-  font-size: 30px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 2s ease-out;
+	font-family: "MatrixCode";
+	color: #8f00ff;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	white-space: nowrap;
+	user-select: none;
+	text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
+	font-size: 30px;
+	/* z-index: -1; */
+	opacity: 0;
+	transition: opacity 2s ease-out;
 }
 
 .icon-enter {
-  padding: 10px;
-  color: white;
-  text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
-  opacity: 0;
+	padding: 10px;
+	color: white;
+	text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+	opacity: 0;
 }
 
 .icon {
-  padding: 10px;
+	padding: 10px;
+	color: white;
+	filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 1));
+	opacity: 1;
+	width: 6%;
+	transition: opacity 2s ease-in;
+}
+
+.main {
+	background: #5c08c9 ;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 50;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	height: 0%;
+}
+
+.main-half {
+  background-color: #5e0ec7 ;
   color: white;
-  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 1));
-  opacity: 1;
-  width: 6%;
-  transition: opacity 2s ease-in;
+	text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+	display: flex;
+  flex-direction: column;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	height: 60%;
+	transition: height, 2s;
+}
+
+.gradient {
+  height: 20%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+	bottom: 0;
+	right: 0;
+  background-image: linear-gradient(black ,rgb(94, 14, 199));
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
