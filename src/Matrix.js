@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import './index.css';
+import './css/index.css';
 import RainStream from './RainSteam'
 import Name from './Name'
 

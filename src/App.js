@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 import Matrix from "./Matrix";
 import Main from "./Main";
 

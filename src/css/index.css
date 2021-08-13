@@ -31,8 +31,36 @@
 	align-items: center;
 	align-self: center;
 }
+@media (max-width: 430px) {
+	.container {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+.container .projects {
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 5rem;
+	width: 100%;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
+  }
 .header {
 	display: flex;
+}
+.header-name {
+	display: flex;
+	flex-direction: row;
+
+}
+@media (max-width: 430px) {
+	.header-name {
+		flex-direction: column;
+	}
 }
 .header-info-enter {
 	font-family: "MatrixCode";
@@ -112,7 +140,7 @@
 }
 
 .main {
-	background: #5c08c9 ;
+	background: white ;
 	display: flex;
 	justify-content: center;
 	position: fixed;
@@ -125,10 +153,10 @@
 }
 
 .main-half {
-  background-color: #5e0ec7 ;
-  color: white;
-	text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
-	display: flex;
+  background-color: white ;
+  color: black;
+  text-shadow: 0px 0px 8px rgba(176, 38, 255, 0.8);
+  display: flex;
   flex-direction: column;
 	position: fixed;
 	left: 0;
@@ -137,21 +165,4 @@
 	overflow: hidden;
 	height: 60%;
 	transition: height, 2s;
-}
-
-.gradient {
-  height: 20%;
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-	bottom: 0;
-	right: 0;
-  background-image: linear-gradient(black ,rgb(94, 14, 199));
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
 }

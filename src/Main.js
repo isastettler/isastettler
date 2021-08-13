@@ -8,7 +8,6 @@ const Main = () => {
 	}, 7000);
 	return (
         <div className={`${style}`}>
-            <div className="gradient"></div>
             <Content />
 		</div>
 	);
